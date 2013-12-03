@@ -1,0 +1,48 @@
+select a role (user / admin/ super), q to quit
+user
+Enter q to quit, l to list menus:
+1.load automotives
+2.list automotives
+3.select an automotive
+4.update an automotive
+5.delete an automotive
+6.list options
+7.configure a car
+8.get the car's price
+9.print the car
+3
+Enter Automotive Name:
+QQ
+Your automotive has been found! Please continue with other options
+6
+options: color;transmittion;brake/traction control;Side Impact Air Bags;
+7
+Enter in the format[no space please]: set name,option name
+color,123
+No option 123 in option set color
+7
+Enter in the format[no space please]: set name,option name
+color,Liquid Grey Clearcoat Metallic
+Your update has been received! Please continue with other options
+9
+Automotive:
+name: QQ
+maker: some QQ
+basePrice: 1845
+choices:
+color: Liquid Grey Clearcoat Metallic
+transmittion: automotive
+brake/traction control: standard
+Side Impact Air Bags: none
+
+7
+Enter in the format[no space please]: set name,option name
+transmittion,standard
+No option standard in option set transmittion
+7
+Enter in the format[no space please]: set name,option name
+brake/traction control,ABS
+Your update has been received! Please continue with other options
+8
+The price is: 2245
+q

@@ -1,0 +1,99 @@
+******************************************
+Before changing, the automotive looks like:
+Automotive:
+name: Focus Wagon ZTW
+maker: Focus
+basePrice: 18445
+options:
+color:
+Option [name=Fort Knox Clearcoat Metallic, price=0]
+Option [name=Liquid Grey Clearcoat Metallic, price=0]
+Option [name=Infra-Red Clearcoat, price=0]
+Option [name=Grabber Green Clearcoat Metallic, price=0]
+Option [name=Sangria Red Clearcoat Metallic, price=0]
+transmittion:
+Option [name=automotive, price=0]
+Option [name=standard, price=-815]
+brake/traction control:
+Option [name=standard, price=0]
+Option [name=ABS, price=400]
+Option [name=ABS with Advance Trac, price=1625]
+Side Impact Air Bags:
+Option [name=none, price=0]
+Option [name=selected, price=350]
+Power Moonroof:
+Option [name=none, price=0]
+Option [name=selected, price=595]
+
+t1 starts running...
+t2 starts running...
+t1 update base price now ...
+t2 update base price now ...
+t1 modify option set color
+t2 modify option set color
+t1 add option 0
+t2 add option 10
+t1 add option 1
+t2 add option 11
+t1 add option 2
+t2 add option 12
+t1 add option 3
+t2 add option 13
+t1 add option 4
+t2 add option 14
+t1 add option 5
+t2 add option 15
+t1 add option 6
+t2 add option 16
+t1 add option 7
+t2 add option 17
+t1 add option 8
+t2 add option 18
+t1 add option 9
+t2 add option 19
+t1 remove option 0
+t2 remove option 10
+t1 remove option 1
+t2 remove option 11
+t1 remove option 2
+t2 remove option 12
+t1 remove option 3
+t2 remove option 13
+t1 remove option 4
+t2 remove option 14
+t1 remove option 5
+t2 remove option 15
+t1 remove option 6
+t2 remove option 16
+t1 remove option 7
+t1 remove option 8
+t2 remove option 17
+t1 remove option 9
+t2 remove option 18
+t2 remove option 19
+******************************************
+After changing, the automotive looks like:
+Automotive:
+name: Focus Wagon ZTW
+maker: Focus
+basePrice: 18445
+options:
+color:
+Option [name=Fort Knox Clearcoat Metallic, price=0]
+Option [name=Liquid Grey Clearcoat Metallic, price=0]
+Option [name=Infra-Red Clearcoat, price=0]
+Option [name=Grabber Green Clearcoat Metallic, price=0]
+Option [name=Sangria Red Clearcoat Metallic, price=0]
+transmittion:
+Option [name=automotive, price=0]
+Option [name=standard, price=-815]
+brake/traction control:
+Option [name=standard, price=0]
+Option [name=ABS, price=400]
+Option [name=ABS with Advance Trac, price=1625]
+Side Impact Air Bags:
+Option [name=none, price=0]
+Option [name=selected, price=350]
+Power Moonroof:
+Option [name=none, price=0]
+Option [name=selected, price=595]

@@ -1,0 +1,191 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="fill_parent"
+    android:layout_height="fill_parent"
+    android:background="#ffffff"
+    android:orientation="vertical" >
+
+    <include
+        android:id="@+id/title"
+        layout="@layout/title" />
+
+    <include
+        android:id="@+id/bottommenu"
+        layout="@layout/common_bottom" />
+
+    <LinearLayout
+        android:layout_width="fill_parent"
+        android:layout_height="fill_parent"
+        android:layout_above="@id/bottommenu"
+        android:layout_below="@id/title"
+        android:orientation="vertical" >
+
+        <!-- fake -->
+        <include layout="@layout/common_listview" />
+
+        <beauty.android.util.HorizontalPager
+            android:id="@+id/horizontal_pager"
+            android:layout_width="match_parent"
+            android:layout_height="0dp"
+            android:layout_weight="1" >
+
+            <LinearLayout
+                android:id="@+id/tl0"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:gravity="center"
+                android:orientation="vertical"
+                android:padding="15dp" >
+
+                <TextView
+                    android:id="@+id/t0"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:text="@string/tutorial_0" />
+            </LinearLayout>
+
+            <LinearLayout
+                android:id="@+id/tl1"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:gravity="center"
+                android:orientation="vertical"
+                android:padding="15dp" >
+
+                <TextView
+                    android:id="@+id/t1"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:text="@string/tutorial_1" />
+            </LinearLayout>
+
+            <LinearLayout
+                android:id="@+id/tl2"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:gravity="center"
+                android:orientation="vertical"
+                android:padding="15dp" >
+
+                <TextView
+                    android:id="@+id/t2"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:text="@string/tutorial_2" />
+            </LinearLayout>
+
+            <LinearLayout
+                android:id="@+id/tl3"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:gravity="center"
+                android:orientation="vertical"
+                android:padding="15dp" >
+
+                <TextView
+                    android:id="@+id/t3"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:text="@string/tutorial_3" />
+            </LinearLayout>
+
+            <LinearLayout
+                android:id="@+id/tl4"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:gravity="center"
+                android:orientation="vertical"
+                android:padding="15dp" >
+
+                <TextView
+                    android:id="@+id/t4"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:text="@string/tutorial_4" />
+            </LinearLayout>
+
+            <LinearLayout
+                android:id="@+id/tl5"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:gravity="center"
+                android:orientation="vertical"
+                android:padding="15dp" >
+
+                <TextView
+                    android:id="@+id/t5"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:text="@string/tutorial_5" />
+            </LinearLayout>
+
+            <LinearLayout
+                android:id="@+id/tl6"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:gravity="center"
+                android:orientation="vertical"
+                android:padding="15dp" >
+
+                <TextView
+                    android:id="@+id/t6"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:text="@string/tutorial_6" />
+            </LinearLayout>
+        </beauty.android.util.HorizontalPager>
+
+        <LinearLayout
+            android:id="@+id/buttons"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal" >
+
+            <LinearLayout
+                android:id="@+id/prev_linear"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:gravity="left"
+                android:orientation="horizontal" >
+
+                <Button
+                    android:id="@+id/prev_button"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:paddingLeft="25dp"
+                    android:paddingRight="25dp"
+                    android:text="@string/prev" >
+                </Button>
+            </LinearLayout>
+
+            <LinearLayout
+                android:id="@+id/next_linear"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:gravity="right"
+                android:orientation="horizontal" >
+
+                <Button
+                    android:id="@+id/next_button"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:paddingLeft="25dp"
+                    android:paddingRight="25dp"
+                    android:text="@string/next" >
+                </Button>
+            </LinearLayout>
+        </LinearLayout>
+
+        <LinearLayout
+            android:id="@+id/linear_dots"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:background="#000"
+            android:gravity="center"
+            android:orientation="horizontal" >
+        </LinearLayout>
+    </LinearLayout>
+
+</RelativeLayout>

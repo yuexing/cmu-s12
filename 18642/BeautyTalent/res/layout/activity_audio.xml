@@ -1,0 +1,84 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="fill_parent"
+    android:layout_height="fill_parent"
+    android:background="#ffffff"
+    android:orientation="vertical" >
+
+    <include
+        android:id="@+id/title"
+        layout="@layout/title" />
+
+    <include
+        android:id="@+id/bottommenu"
+        layout="@layout/common_bottom" />
+
+    <include layout="@layout/common_listview" />
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_above="@id/bottommenu"
+        android:layout_below="@id/title"
+        android:orientation="vertical" >
+
+        <Button
+            android:id="@+id/start"
+            android:layout_width="145dip"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center"
+            android:layout_margin="10dip"
+            android:background="@drawable/btn_pink"
+            android:text="@string/start"
+            android:textColor="@color/white"
+            android:textSize="18sp" />
+
+        <Button
+            android:id="@+id/stop"
+            android:layout_width="145dip"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center"
+            android:layout_margin="10dip"
+            android:background="@drawable/btn_pink"
+            android:text="@string/stop"
+            android:textColor="@color/white"
+            android:textSize="18sp" />
+
+        <Button
+            android:id="@+id/list"
+            android:layout_width="145dip"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center"
+            android:layout_margin="10dip"
+            android:background="@drawable/btn_pink"
+            android:text="@string/list"
+            android:textColor="@color/white"
+            android:textSize="18sp" />
+
+        <TextView
+            android:id="@+id/recording"
+            android:layout_width="fill_parent"
+            android:layout_height="wrap_content"
+            android:paddingBottom="10dp"
+            android:paddingTop="5dp"
+            android:text="@string/recording"
+            android:textColor="@color/spikearedetail_productname_color"
+            android:textSize="17sp"
+            android:visibility="gone" >
+        </TextView>
+        
+        <TextView
+            android:id="@+id/playing"
+            android:layout_width="fill_parent"
+            android:layout_height="wrap_content"
+            android:paddingBottom="10dp"
+            android:paddingTop="5dp"
+            android:text="@string/playing"
+            android:textColor="@color/spikearedetail_productname_color"
+            android:textSize="17sp"
+            android:visibility="gone" >
+        </TextView>
+        
+    </LinearLayout>
+
+</RelativeLayout>

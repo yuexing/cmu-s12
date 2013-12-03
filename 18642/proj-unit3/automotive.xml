@@ -1,0 +1,127 @@
+<automotives>
+    <automotive>
+        <name>Focus Wagon ZTW</name>
+        <maker>Focus</maker>
+        <baseprice>18445</baseprice>
+        <optionset>
+            <name>color</name>
+            <option>
+                <name>Fort Knox Clearcoat Metallic</name>
+                <price>0</price>
+            </option>
+            <option>
+                <name>Liquid Grey Clearcoat Metallic</name>
+                <price>0</price>
+            </option>
+            <option>
+                <name>Infra-Red Clearcoat</name>
+                <price>0</price>
+            </option>
+            <option>
+                <name>Grabber Green Clearcoat Metallic</name>
+                <price>0</price>
+            </option>
+            <option>
+                <name>Sangria Red Clearcoat Metallic</name>
+                <price>0</price>
+            </option>
+        </optionset>
+        <optionset>
+            <name>transmittion</name>
+            <option>
+                <name>automotive</name>
+                <price>0</price>
+            </option>
+            <option>
+                <name>standard</name>
+                <price>-815</price>
+            </option>
+        </optionset>
+        <optionset>
+            <name>brake/traction control</name>
+            <option>
+                <name>standard</name>
+                <price>0</price>
+            </option>
+            <option>
+                <name>ABS</name>
+                <price>400</price>
+            </option>
+            <option>
+                <name>ABS with Advance Trac</name>
+                <price>1625</price>
+            </option>
+        </optionset>
+        <optionset>
+            <name>Side Impact Air Bags</name>
+            <option>
+                <name>none</name>
+                <price>0</price>
+            </option>
+            <option>
+                <name>selected</name>
+                <price>350</price>
+            </option>
+        </optionset>
+        <optionset>
+            <name>Power Moonroof</name>
+            <option>
+                <name>none</name>
+                <price>0</price>
+            </option>
+            <option>
+                <name>selected</name>
+                <price>595</price>
+            </option>
+        </optionset>
+    </automotive>
+    <automotive>
+        <name>QQ</name>
+        <maker>some QQ</maker>
+        <baseprice>1845</baseprice>
+        <optionset>
+            <name>color</name>
+            <option>
+                <name>Liquid Grey Clearcoat Metallic</name>
+                <price>0</price>
+            </option>
+            <option>
+                <name>Grabber Green Clearcoat Metallic</name>
+                <price>0</price>
+            </option>
+            <option>
+                <name>Sangria Red Clearcoat Metallic</name>
+                <price>0</price>
+            </option>
+        </optionset>
+        <optionset>
+            <name>transmittion</name>
+            <option>
+                <name>automotive</name>
+                <price>0</price>
+            </option>
+        </optionset>
+        <optionset>
+            <name>brake/traction control</name>
+            <option>
+                <name>standard</name>
+                <price>0</price>
+            </option>
+            <option>
+                <name>ABS</name>
+                <price>400</price>
+            </option>
+        </optionset>
+        <optionset>
+            <name>Side Impact Air Bags</name>
+            <option>
+                <name>none</name>
+                <price>0</price>
+            </option>
+            <option>
+                <name>selected</name>
+                <price>350</price>
+            </option>
+        </optionset>
+    </automotive>
+</automotives>

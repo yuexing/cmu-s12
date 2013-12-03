@@ -1,0 +1,56 @@
+2012-02-12 14:41:44,234 [main] lab.amixyue.context.LocalContext - init clock service: logic
+2012-02-12 14:41:44,234 [main] lab.amixyue.context.LocalContext - parse Configuration
+2012-02-12 14:41:44,265 [main] lab.amixyue.context.LocalContext - init protocal: tcp
+2012-02-12 14:41:44,296 [main] lab.amixyue.context.LocalContext - parse SendRules
+2012-02-12 14:41:44,296 [main] lab.amixyue.context.LocalContext - parse ReceiveRules
+2012-02-12 14:41:44,296 [main] lab.amixyue.context.LocalContext - buildContext: AbstractContext.Context(map={})
+2012-02-12 14:42:32,781 [Thread-3] lab.amixyue.receive.RecvCtrlFactory - add to recvQueue: LogicTimeMessage(time=1)
+lab.amixyue.context.LocalContext - init clock service: logic
+2012-02-12 14:41:53,609 [main] lab.amixyue.context.LocalContext - parse Configuration
+2012-02-12 14:41:53,625 [main] lab.amixyue.context.LocalContext - init protocal: tcp
+2012-02-12 14:41:53,687 [main] lab.amixyue.context.LocalContext - parse SendRules
+2012-02-12 14:41:53,687 [main] lab.amixyue.context.LocalContext - parse ReceiveRules
+2012-02-12 14:41:53,687 [main] lab.amixyue.context.LocalContext - buildContext: AbstractContext.Context(map={})
+2012-02-12 14:42:12,281 [main] lab.amixyue.context.LocalContext - parse ClockService
+2012-02-12 14:42:12,281 [main] lab.amixyue.context.LocalContext - init clock service: logic
+2012-02-12 14:42:12,296 [main] lab.amixyue.context.LocalContext - parse Configuration
+2012-02-12 14:42:12,312 [main] lab.amixyue.context.LocalContext - init protocal: tcp
+2012-02-12 14:42:12,343 [main] lab.amixyue.context.LocalContext - parse SendRules
+2012-02-12 14:42:12,343 [main] lab.amixyue.context.LocalContext - parse ReceiveRules
+2012-02-12 14:42:12,343 [main] lab.amixyue.context.LocalContext - buildContext: AbstractContext.Context(map={})
+2012-02-12 14:42:32,718 [main] lab.amixyue.controller.MessagePasser - begin to send: Message(src=A, dest=B, type=multi, data=123, id=0)
+2012-02-12 14:42:32,718 [main] lab.amixyue.pipeline.PipelineChooserImpl - enter pipeline send
+2012-02-12 14:42:32,718 [main] lab.amixyue.pipeline.valve.MultiSendValve - Enter MulticastValve 
+2012-02-12 14:42:32,718 [main] lab.amixyue.pipeline.valve.SendRuleValve - Enter SendRuleValve 
+2012-02-12 14:42:32,734 [main] lab.amixyue.pipeline.valve.SendRuleValve - Message(src=A, dest=B, type=multi, data=123, id=0) :normal
+2012-02-12 14:42:32,734 [main] lab.amixyue.pipeline.valve.SendClockValve - Enter ClockValve 
+2012-02-12 14:42:32,734 [main] lab.amixyue.clock.LogicClock - logic timestamped: LogicTimeMessage(time=1)
+2012-02-12 14:42:32,734 [main] lab.amixyue.pipeline.valve.SendValve - Enter SendValve 
+2012-02-12 14:42:32,734 [main] lab.amixyue.send.SendCtrlFactory - sending to: 128.237.253.206: 14255
+2012-02-12 14:42:32,765 [main] lab.amixyue.send.SendCtrlFactory - send by tcp success
+2012-02-12 14:42:32,765 [main] lab.amixyue.pipeline.valve.SendRuleValve - Enter SendRuleValve 
+2012-02-12 14:42:32,765 [main] lab.amixyue.pipeline.valve.SendRuleValve - Message(src=A, dest=charlie, type=multi, data=123, id=1) :normal
+2012-02-12 14:42:32,765 [main] lab.amixyue.pipeline.valve.SendClockValve - Enter ClockValve 
+2012-02-12 14:42:32,765 [main] lab.amixyue.clock.LogicClock - logic timestamped: LogicTimeMessage(time=2)
+2012-02-12 14:42:32,765 [main] lab.amixyue.pipeline.valve.SendValve - Enter SendValve 
+2012-02-12 14:42:32,765 [main] lab.amixyue.send.SendCtrlFactory - sending to: 128.237.240.75: 12998
+2012-02-12 14:42:33,843 [main] lab.amixyue.send.SendCtrlFactory - out put or connect error!
+2012-02-12 14:42:33,843 [main] lab.amixyue.pipeline.valve.SendRuleValve - Enter SendRuleValve 
+2012-02-12 14:42:33,843 [main] lab.amixyue.pipeline.valve.SendRuleValve - Message(src=A, dest=daphnie, type=multi, data=123, id=2) :normal
+2012-02-12 14:42:33,843 [main] lab.amixyue.pipeline.valve.SendClockValve - Enter ClockValve 
+2012-02-12 14:42:33,843 [main] lab.amixyue.clock.LogicClock - logic timestamped: LogicTimeMessage(time=3)
+2012-02-12 14:42:33,843 [main] lab.amixyue.pipeline.valve.SendValve - Enter SendValve 
+2012-02-12 14:42:33,843 [main] lab.amixyue.send.SendCtrlFactory - sending to: 128.237.244.96: 1987
+2012-02-12 14:42:43,843 [main] lab.amixyue.send.SendCtrlFactory - out put or connect error!
+2012-02-12 14:42:43,843 [main] lab.amixyue.pipeline.valve.SendRuleValve - Enter SendRuleValve 
+2012-02-12 14:42:43,843 [main] lab.amixyue.pipeline.valve.SendRuleValve - Message(src=A, dest=Logger, type=multi, data=123, id=3) :normal
+2012-02-12 14:42:43,843 [main] lab.amixyue.pipeline.valve.SendClockValve - Enter ClockValve 
+2012-02-12 14:42:43,843 [main] lab.amixyue.clock.LogicClock - logic timestamped: LogicTimeMessage(time=4)
+2012-02-12 14:42:43,843 [main] lab.amixyue.pipeline.valve.SendValve - Enter SendValve 
+2012-02-12 14:42:43,859 [main] lab.amixyue.send.SendCtrlFactory - sending to: 128.237.126.82: 12345
+2012-02-12 14:42:53,859 [main] lab.amixyue.send.SendCtrlFactory - out put or connect error!
+2012-02-12 14:42:53,859 [main] lab.amixyue.pipeline.valve.MultiSendValve - Unsuccessful Multicast:
+2012-02-12 14:42:53,859 [main] lab.amixyue.pipeline.valve.MultiSendValve - Node(name=charlie, ip=128.237.240.75, port=12998, protocal=tcp)
+2012-02-12 14:42:53,859 [main] lab.amixyue.pipeline.valve.MultiSendValve - Node(name=daphnie, ip=128.237.244.96, port=1987, protocal=tcp)
+2012-02-12 14:42:53,859 [main] lab.amixyue.pipeline.valve.MultiSendValve - Node(name=Logger, ip=128.237.126.82, port=12345, protocal=tcp)
+2012-02-12 14:42:53,859 [main] lab.amixyue.pipeline.Pipeline - Not real broken: Mulicast all

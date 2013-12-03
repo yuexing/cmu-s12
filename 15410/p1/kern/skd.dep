@@ -1,0 +1,8 @@
+kern/skd.o: kern/skd.c 410kern/misc/sudoku.h 410kern/misc/sudokudb.h \
+ 410kern/RNG/mt19937int.h
+
+410kern/misc/sudoku.h:
+
+410kern/misc/sudokudb.h:
+
+410kern/RNG/mt19937int.h:

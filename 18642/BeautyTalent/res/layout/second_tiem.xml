@@ -1,0 +1,37 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="fill_parent"
+    android:layout_height="fill_parent"
+    android:background="#ffffff"
+    android:orientation="vertical" >
+
+    <include
+        android:id="@+id/title"
+        layout="@layout/title" />
+
+    <include
+        android:id="@+id/bottommenu"
+        layout="@layout/common_bottom" />
+
+    <ScrollView
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content"
+        android:fillViewport="true"
+        android:layout_above="@id/bottommenu"
+        android:layout_below="@id/title" >
+
+        <LinearLayout
+            android:layout_width="fill_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical" >
+
+            <Gallery
+                android:id="@+id/gallery"
+                android:layout_width="fill_parent"
+                android:layout_height="220dp" />
+
+            <include layout="@layout/common_listview" />
+        </LinearLayout>
+    </ScrollView>
+
+</RelativeLayout>

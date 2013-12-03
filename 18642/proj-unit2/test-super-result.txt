@@ -1,0 +1,59 @@
+select a role (user / admin/ super), q to quit
+super
+Enter q to quit, l to list menus:
+1.load automotives
+2.list automotives
+3.select an automotive
+4.update an automotive
+5.delete an automotive
+6.list options
+7.configure a car
+8.get the car's price
+9.print the car
+1
+Enter File Name:
+automotive.xml
+Your file has been loaded! Please continue with other options
+2
+Automotive:
+name: Focus Wagon ZTW
+maker: Focus
+basePrice: 18445
+options:
+color:
+Option [name=Fort Knox Clearcoat Metallic, price=0]
+Option [name=Liquid Grey Clearcoat Metallic, price=0]
+Option [name=Infra-Red Clearcoat, price=0]
+Option [name=Grabber Green Clearcoat Metallic, price=0]
+Option [name=Sangria Red Clearcoat Metallic, price=0]
+transmittion:
+Option [name=automotive, price=0]
+Option [name=standard, price=-815]
+brake/traction control:
+Option [name=standard, price=0]
+Option [name=ABS, price=400]
+Option [name=ABS with Advance Trac, price=1625]
+Side Impact Air Bags:
+Option [name=none, price=0]
+Option [name=selected, price=350]
+Power Moonroof:
+Option [name=none, price=0]
+Option [name=selected, price=595]
+
+Automotive:
+name: QQ
+maker: some QQ
+basePrice: 1845
+options:
+color:
+Option [name=Liquid Grey Clearcoat Metallic, price=0]
+Option [name=Grabber Green Clearcoat Metallic, price=0]
+Option [name=Sangria Red Clearcoat Metallic, price=0]
+transmittion:
+Option [name=automotive, price=0]
+brake/traction control:
+Option [name=standard, price=0]
+Option [name=ABS, price=400]
+Side Impact Air Bags:
+Option [name=none, price=0]
+Option [name=selected, price=350]

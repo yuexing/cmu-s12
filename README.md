@@ -1,5 +1,4 @@
-cmu-s12
-=======
+# cmu-s12 #
 
 This repository includes some code I have written in CMU during 2012-2013.
 
@@ -17,7 +16,7 @@ The directory includes: Bit manipulation, Cache Simulator, Malloc library (or dy
 
 * Operating System(15410)
 
-The directory includes: Stack Crawler, Kernel, and User thread/synchronization library.
+The directory includes: Stack Crawler, Unix-like Kernel, and User thread/synchronization library.
 
 * Android Development(18642)
 

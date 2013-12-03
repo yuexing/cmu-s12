@@ -1,0 +1,165 @@
+/**
+
+@mainpage 15-410 Project 2
+
+@author Yue Xing(yuexing)
+*/
+
+This is a user library built for P3 of 15410 F2012. The 
+implementation involves mutex, cond, sem, rwlock, and 
+threadlib. 
+
+Strategies used are as follows:
+
+1.Error Handling:
+
+For mutex, it is illegal for twice initialization, using 
+without initialization, lock with lock, unlock without 
+lock, destroy not being holder, destroy with waiting 
+threads.
+
+For cond, it is illegal for twice initialization, using 
+without initialization, destroy with waiting threads.
+ 
+For sem, it is illegal for twice initialization, using 
+without initialization, destroy with waiting threads.
+
+For rwlock, it is illegal for twice initialization, using 
+without initialization, downgrade without being a writer, 
+destroy with working threads or waiting threads.
+
+Entry checks of NULL pointer, validity(initialization), 
+the holder/writer, and safe-destruction are done carefully.
+Assert/Panic is applied to keep safe.
+
+2.Synchronization:
+
+2.1 Mutual Exclusion:
+spinlock is achieved by XCHG.
+
+mutex is protected by spinlock to exclusively check the
+lock status and en/de Queue. 
+
+rwlock is protected by mutex to exclusively modify and 
+check the counters.
+
+2.2 Progress:
+spinlock is done by yield-to-holder.
+
+mutex is done by deschedule/make_runnable.
+
+rwlock is done by cond_wait(), cond_broadcast() readers or
+cond_signal() a writer.
+
+cond and sem is naturally for voluntary deschedule.
+
+NOTE:
+deschedule/make_runnable has been speeded up by including
+a 'reject' field in the queue node. Make a thread runnable
+now includes 2 steps : reject = 1; make_runnable(). The
+2 steps need to be done atomically, or a thread's 2 deschedule
+may be made runnable by 1 'make run'. The 'atomical' is 
+guaranteed by a spinlock. Please refer the code comment.
+
+2.3 Bounded Waiting:
+
+spinlock is yield-style and does not support bounded waiting. 
+Thus it is designed for protecting atomically excuting
+short and almost non-competant instructions, eg. en/de Queue.
+
+mutex is backed by spinlock-protected lock state and queue.
+The queue is ejected from front on a unlock.
+
+cond is fair since it is based on a mutex-protected queue 
+which is ejected from front.
+
+sem and rwlock are fair since they're based on mutex and 
+cond.
+
+3.Thread:
+
+3.1 Model
+
+A thread consisits of a tcb and growing stack.
+
+A tcb consists of basic infor, a esp3 stack for the 
+swexn, and mutex/cond for synchronization.
+
+A stack has a 4-byte base on the top pointed to the tcb of
+the corresponding thread.
+
+A stack is initialized as PAGE_SIZE, and is growing through
+thr_autostack with the unit of PAGE_SIZE until the limit.
+
+3.2 Initialization:
+
+The thread library is initialized by initializing the 
+global libthr data struct, registering thr_autostack 
+instead of autostack, allocating stack for the main
+thread, creating/registering/adding main tcb, hacking 
+main's return addr to thr_exit.
+
+3.3 Create:
+
+In my model, a thread can run only after its parent has
+set its tid. Busy waiting is avoided by the tcb->lock 
+and tcb->cv. 
+
+A new thread runs as: swexn(A->esp3, thr_autogrowth, 0, 0); 
+thr_exit(func(args)).
+
+3.4 Exit and Join:
+
+A thread can be joined only after its parent has added it
+into global thread queue, which is done after the setting
+tid.
+
+A thread exits by setting status, and switching to esp3 to
+run after_switch_stack(): free its stack, and atomically 
+mark as exited, broadcast death and vanish.
+
+A thread B joins another thread A by exclusively 
+traversing the thread list. If A does not exist at the p
+oint,which indicate non-existence, an ERROR will be 
+returned. If A has been marked as exited, B will 'reap' A
+and return with SUCCESS. Otherwise, B will cond_wait(A->cv, 
+thr_list_lock) until A's vanishing and cond_broadcast().
+When B wakes up, it will atomically traverse again, if A
+exists, 'reap' A and return SUCCESS; otherwise, return with
+an ERROR.
+
+Since traversing is atomic, thus a thread will be reaped
+only once.
+
+Note:
+1) Only one cv is needed, since ready's signal and exit's
+broadcast will not affect each other;
+
+2) Thread's vanish is done by INT which will not use the
+stack(esp3), which can have been reaped;
+
+3.5 Error Handling:
+
+Once there's an error happening all allocated rsrc will
+be released and ERROR will be returned.
+
+Autostack is handled with unit of PAGE_SIZE. The limit of a
+thread is checked in order not to compromise other threads'
+stack. When an thread exceeds its stack, the whole process
+will be killed for the reason of safety.
+
+3.6 Other Design and Future Work
+
+1:N can be done once we have rules:
+context switch happens only on thr_exit()/thr_yield by
+pusha the current 'thread' and popa the next 'thread';
+
+Details may include fake a pusha (specify %esp and %eip)
+for the first run.
+
+M:N can be done by M 'INT $THREAD_FORK_INT' to get M
+kernel threads. Each kernel thread take care of 'no more
+than X' user threads. We have N <= M * X. The rule is 
+almost the same with 1:N.
+
+Details needs more consideration...

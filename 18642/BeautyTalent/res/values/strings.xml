@@ -1,0 +1,156 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+
+    <string name="app_name">Beauty Talent</string>
+    <string name="index">Home</string>
+    <string name="search">Search</string>
+    <string name="more">More</string>
+    <string name="record">History</string>
+    <string name="advice">Advice</string>
+    <string name="exit">Log Out</string>
+    <string name="are_you_sure">Are you sure?</string>
+    <string name="in_progress">Please wait for progress...</string>
+    <string name="menu_home">Home</string>
+    <string name="menu_product">Product</string>
+    <string name="menu_fav">Favorite</string>
+    <string name="menu_search">Search</string>
+    <string name="menu_my_beauty">Beauty Talent</string>
+    <string name="menu_more">More</string>
+    <string name="about">About</string>
+    <string name="history">Recent View</string>
+    <string name="mycollect">My fav</string>
+
+    <!-- auth -->
+    <string name="twitter">Logged In?</string>
+    <string name="oauth_name">OAUTH</string>
+    <string name="tweet">Enter your Message here</string>
+    <string name="label"><b>Type Something</b></string>
+    <string name="post"><b>Post</b></string>
+    <string name="token">token</string>
+    <string name="secret">secret</string>
+    <string name="userhint">Not logged in</string>
+    <string name="type">Type something and see if it shows up here</string>
+    <string name="auth_progress_title">Authenticating...</string>
+    <string name="auth_progress_text">Fetching your profile information.</string>
+    <string name="tweet_progress_title">Sending...</string>
+    <string name="tweet_progress_text">Posting your Message</string>
+    <string name="tweet_empty">You have to enter something</string>
+    <string name="tweet_error">There was some kind of problem!</string>
+    <string name="bad_value">Bad Value</string>
+    <string name="connecting">Connecting</string>
+    <string name="connected">Connected - Please press Return</string>
+    <string name="connection_problem">Problem connecting - Please press Return</string>
+    
+    <!-- audio -->
+    <string name="start">Start Record</string>
+    <string name="stop">Stop Record</string>
+    <string name="list">Select And Play</string>
+    <string name="playing">The Audio is Playing...</string>
+    <string name="recording">Please Talk, we are recording...</string>
+    
+    <!-- common -->
+    <string name="no_record">No Record!</string>
+    
+    <!-- Location setting -->
+    <string name="alert">Alert</string>
+    <string name="go_to">Details</string>
+    <string name="setting_page">Setting Page</string>
+    <string name="server_error">The Application cannot connect to the server.
+		Please try again.</string>
+    <string name="location_network">We suggest you allow your location to be detected
+		using &quot;wireless networks&quot;. GPS
+		does not work well inside of
+		buildings.</string>
+    <string name="location_gps">We suggest you allow your location to be detected
+		using &quot;GPS Satellites&quot;.</string>
+    <string name="location_error">We suggest you allow your location to be detected
+		using either Wireless Networks or GPS Satellites. Otherwise Tiramisu
+		will not work properly.</string>
+    <string name="edit">Edit</string>
+
+    <!-- my beauty -->
+    <string name="name">Name:</string>
+    <string name="login">Log in</string>
+    <string name="logout">Log out</string>
+
+    <!-- comment -->
+    <string name="label_comment">Post your review here: </string>
+    <string name="submit">Submit</string>
+    <string name="photo">Take Photo</string>
+    <string name="cancel_photo">Cancel Photo</string>
+    <string name="album_name">Beauty Album</string>
+
+    <!-- product detail -->
+    <string name="previous_page">Previous</string>
+    <string name="next_page">Next</string>
+    <string name="label_your_rate">Your Rate:</string>
+    <string name="label_product_rate">Current Rate:</string>
+    <string name="label_manu_info">Information from Manufacturer</string>
+    <string name="label_product_benefits">Benefits:</string>
+    <string name="label_product_tags">Tags:</string>
+    <string name="label_product_category">Category:</string>
+    <string name="label_product_brand">Brand:</string>
+    <string name="label_product_intro">Introduction:</string>
+    <string name="label_product_price">Price:</string>
+
+    <!-- btns -->
+    <string name="view_map">Local Retails</string>
+    <string name="read_review">Read Reviews</string>
+    <string name="add_fav">Add to Favorite</string>
+    <string name="del_fav">Remove From Favorite</string>
+
+    <!-- Tutorial -->
+    <string name="prev">Prev</string>
+    <string name="next">Next</string>
+    <string name="tutorial_0">Home Page: You can view products in four ways:by brand, by category, by benefit, by tag.
+        Click it, view our products information.</string>
+    <string name="tutorial_1">Product List Page: It is an express way to reach products. You can click on the second bottom button, which directs to 
+        a list of products we provide.</string>
+    <string name="tutorial_2">Favorite Page: If you want to have your own favorite list, you have to log in by Twitter firstly. To log in, please click on the second bottom button.
+        Then you will see a login button. Click it and you will be directed to a Twitter Signin page. After signing in, you can enjoy our application more fully.</string>
+    <string name="tutorial_3">Product Page: When you click into a product page, you can see detailed information of the product provided by the other users and product manufacturer. You can see the average rates of the product 
+        and reviews about the product. You can also provide your own review and rate after you log in. </string>
+    <string name="tutorial_4">Product Page: If you click on the LocalRetail, Google map will find you and find the nearest retails providing the product you want. You can click the retail pin in the map, then you can get specific 
+        location and contact information about the retail. You will also find the ongoing deals in the retail at the same page."</string>
+    <string name="tutorial_5">Product Page: If you want to post review or reply to others reviews, click "View Review", then post your own or reply to others. You can also take a photo and
+        post it with your review. </string>
+    <string name="tutorial_6">Manage Your Account Page: If you click the forth bottom button, you will see your favorite list and your posted reviews. Meanwhile, you can login or logout in the same page.</string>
+
+    <!-- About us -->
+    <string name="about_us_text1">Skincare and makeup products are must-have for both modern women and men. 
+        \n\n
+        The inspiration for this project arose from personal experiences that are probably quite common to anybody 
+        who need to buy skincare products but do not know which one to choose from so many existing brands. 
+        \n
+        Most customers except some “experts or talent” in cosmetics feel lost when they decide which product to buy. 
+        \n
+        Most of them will search in Google, however most information are provided by manufacture and these information 
+        are full with eulogy which helps a little to a lost customer. 
+        \n\n
+        What the customer really needs is advice and review from users of a product, so we want to provide a place 
+        where users can trivially and timely post their experience and review of a product meanwhile customers can 
+        easily and conveniently look up for genuine description and review.</string>
+    <string name="about_us_text2">        This is more about us than about product.</string>
+    <string name="menu_settings">Settings</string>
+
+    <!-- search -->
+    <string name="search_invoke">App/Search/Invoke Search</string>
+    <string name="msg_search">   This activity shows a few different ways to invoke search, 
+   and inserts context-specific data for use by the search activity.</string>
+    <string name="search_sect_invocation">Ways to invoke search</string>
+    <string name="label_onsearchrequested">Search!</string>
+    <string name="search_sect_options">Optional search parameters</string>
+    <string name="label_search_query_prefill">"Prefill query: "</string>
+    <string name="label_search_query_appdata">"App Data: "</string>
+    <string name="search_query_results">App/Search/Query Search Results</string>
+    <string name="msg_search_results">   This activity accepts query strings via the ACTION_SEARCH intent.  
+   In a full implementation, you would use the query string to 
+   select results from your data source, and present a list 
+   of those results to the user.</string>
+    <string name="label_search_query">"Query String: "</string>
+    <string name="label_search_appdata">"Query App Data: "</string>
+    <string name="label_search_deliveredby">"Activity Method: "</string>
+    <string name="search_label">Search Demo</string>
+    <string name="search_hint">Search Demo Hint</string>
+
+</resources>

@@ -1,0 +1,1 @@
+insert into beauty_user(email, password, rid, type) values ('test', '1234', -1, 'admin');

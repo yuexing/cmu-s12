@@ -1,0 +1,79 @@
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="fill_parent"
+    android:layout_height="fill_parent"
+    android:background="#ffffff"
+    android:orientation="vertical" >
+
+    <include
+        android:id="@+id/title"
+        layout="@layout/title" />
+
+    <include
+        android:id="@+id/bottommenu"
+        layout="@layout/common_bottom" />
+
+    <LinearLayout
+        android:id="@+id/common_listview_parent"
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content"
+        android:layout_above="@id/bottommenu"
+        android:layout_below="@id/title"
+        android:orientation="vertical" >
+
+        <include layout="@layout/common_listview" />
+        
+          <!-- Name Label -->
+    <TextView
+        android:text="Name:"
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="10dip"
+        android:layout_marginBottom="5dip"
+        android:textStyle="bold"/>
+    
+    <!--  Name Value -->
+    <TextView
+        android:id="@+id/name"
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content"/>
+    
+    <!-- Address Label -->
+    <TextView
+        android:text="Address:"
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="15dip"
+        android:layout_marginBottom="5dip"
+        android:textStyle="bold"/>
+    
+    <!--  Address Value -->
+    <TextView
+        android:id="@+id/address"
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content"/>
+    
+    <!-- Postcode Label -->
+    <TextView
+        android:id="@+id/postcode"
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="10dip"/>
+    
+    <!-- Phone Number Label -->
+    <TextView
+        android:id="@+id/phone"
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="10dip"/>
+    
+    
+    <!-- Location Value -->
+    <TextView
+        android:id="@+id/location"
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="15dip"
+        android:layout_marginBottom="5dip"/>
+    </LinearLayout>
+
+</RelativeLayout>

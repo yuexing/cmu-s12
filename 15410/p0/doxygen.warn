@@ -1,0 +1,75 @@
+/afs/andrew.cmu.edu/usr20/yuexing/15410/p0/tests/add_one.h:10: Warning: Member add_one1(int) (function) of file add_one.h is not documented.
+/afs/andrew.cmu.edu/usr20/yuexing/15410/p0/tests/add_one.h:11: Warning: Member add_one2(int) (function) of file add_one.h is not documented.
+/afs/andrew.cmu.edu/usr20/yuexing/15410/p0/tests/add_one_test.c:14: Warning: Member main() (function) of file add_one_test.c is not documented.
+/afs/andrew.cmu.edu/usr20/yuexing/15410/p0/tests/alarming_test.c:26: Warning: Member MEGABYTE (define) of file alarming_test.c is not documented.
+/afs/andrew.cmu.edu/usr20/yuexing/15410/p0/tests/alarming_test.c:30: Warning: Member alarming(char *str, char *notstr) (function) of file alarming_test.c is not documented.
+/afs/andrew.cmu.edu/usr20/yuexing/15410/p0/tests/alarming_test.c:38: Warning: Member dingdong(int sig) (function) of file alarming_test.c is not documented.
+/afs/andrew.cmu.edu/usr20/yuexing/15410/p0/tests/alarming_test.c:45: Warning: Member main() (function) of file alarming_test.c is not documented.
+/afs/andrew.cmu.edu/usr20/yuexing/15410/p0/tests/alarming_test.c:28: Warning: Member work_done (variable) of file alarming_test.c is not documented.
+/afs/andrew.cmu.edu/usr20/yuexing/15410/p0/tests/evil_test.c:19: Warning: Member foo(char *str) (function) of file evil_test.c is not documented.
+/afs/andrew.cmu.edu/usr20/yuexing/15410/p0/tests/evil_test.c:23: Warning: Member main() (function) of file evil_test.c is not documented.
+/afs/andrew.cmu.edu/usr20/yuexing/15410/p0/traceback/help.h:21: Warning: Member handler_t(int) (typedef) of file help.h is not documented.
+/afs/andrew.cmu.edu/usr20/yuexing/15410/p0/traceback/traceback.c:241: Warning: unexpected end of comment while inside <ul> block
+/afs/andrew.cmu.edu/usr20/yuexing/15410/p0/traceback/traceback.c:723: Warning: argument 'type' of command @param is not found in the argument list of is_print_strvalue(const char *str, char *msg)
+/afs/andrew.cmu.edu/usr20/yuexing/15410/p0/traceback/traceback.c:723: Warning: The following parameters of is_print_strvalue(const char *str, char *msg) are not documented:
+  parameter 'msg'
+/afs/andrew.cmu.edu/usr20/yuexing/15410/p0/traceback/traceback_globals.c:23: Warning: Member functions[FUNCTS_MAX_NUM] (variable) of file traceback_globals.c is not documented.
+/afs/andrew.cmu.edu/usr20/yuexing/15410/p0/traceback/traceback_internal.h:19: Warning: Member TYPE_CHAR (define) of file traceback_internal.h is not documented.
+/afs/andrew.cmu.edu/usr20/yuexing/15410/p0/traceback/traceback_internal.h:20: Warning: Member TYPE_INT (define) of file traceback_internal.h is not documented.
+/afs/andrew.cmu.edu/usr20/yuexing/15410/p0/traceback/traceback_internal.h:21: Warning: Member TYPE_FLOAT (define) of file traceback_internal.h is not documented.
+/afs/andrew.cmu.edu/usr20/yuexing/15410/p0/traceback/traceback_internal.h:22: Warning: Member TYPE_DOUBLE (define) of file traceback_internal.h is not documented.
+/afs/andrew.cmu.edu/usr20/yuexing/15410/p0/traceback/traceback_internal.h:23: Warning: Member TYPE_STRING (define) of file traceback_internal.h is not documented.
+/afs/andrew.cmu.edu/usr20/yuexing/15410/p0/traceback/traceback_internal.h:24: Warning: Member TYPE_STRING_ARRAY (define) of file traceback_internal.h is not documented.
+/afs/andrew.cmu.edu/usr20/yuexing/15410/p0/traceback/traceback_internal.h:25: Warning: Member TYPE_VOIDSTAR (define) of file traceback_internal.h is not documented.
+/afs/andrew.cmu.edu/usr20/yuexing/15410/p0/traceback/traceback_internal.h:26: Warning: Member TYPE_UNKNOWN (define) of file traceback_internal.h is not documented.
+/afs/andrew.cmu.edu/usr20/yuexing/15410/p0/traceback/traceback_internal.h:30: Warning: Member ARGS_MAX_NUM (define) of file traceback_internal.h is not documented.
+/afs/andrew.cmu.edu/usr20/yuexing/15410/p0/traceback/traceback_internal.h:32: Warning: Member ARGS_MAX_NAME (define) of file traceback_internal.h is not documented.
+/afs/andrew.cmu.edu/usr20/yuexing/15410/p0/traceback/traceback_internal.h:34: Warning: Member FUNCTS_MAX_NUM (define) of file traceback_internal.h is not documented.
+/afs/andrew.cmu.edu/usr20/yuexing/15410/p0/traceback/traceback_internal.h:36: Warning: Member FUNCTS_MAX_NAME (define) of file traceback_internal.h is not documented.
+/afs/andrew.cmu.edu/usr20/yuexing/15410/p0/traceback/traceback_internal.h:39: Warning: Member MAX_FUNCTION_SIZE_BYTES (define) of file traceback_internal.h is not documented.
+/afs/andrew.cmu.edu/usr20/yuexing/15410/p0/traceback/traceback_internal.h:71: Warning: Member functions[FUNCTS_MAX_NUM] (variable) of file traceback_internal.h is not documented.
+/afs/andrew.cmu.edu/usr20/yuexing/15410/p0/traceback/traceback_internal2.h:22: Warning: Member TYPE_PTR (define) of file traceback_internal2.h is not documented.
+/afs/andrew.cmu.edu/usr20/yuexing/15410/p0/traceback/traceback_internal2.h:23: Warning: Member TYPE_FUNCT (define) of file traceback_internal2.h is not documented.
+/afs/andrew.cmu.edu/usr20/yuexing/15410/p0/traceback/traceback_internal2.h:24: Warning: Member TYPE_ARG (define) of file traceback_internal2.h is not documented.
+/afs/andrew.cmu.edu/usr20/yuexing/15410/p0/traceback/traceback_internal2.h:25: Warning: Member TYPE_STR (define) of file traceback_internal2.h is not documented.
+/afs/andrew.cmu.edu/usr20/yuexing/15410/p0/traceback/traceback_internal2.h:29: Warning: Member STR_MAX_NUM (define) of file traceback_internal2.h is not documented.
+/afs/andrew.cmu.edu/usr20/yuexing/15410/p0/traceback/traceback_internal2.h:31: Warning: Member STR_MAX_SIZE (define) of file traceback_internal2.h is not documented.
+/afs/andrew.cmu.edu/usr20/yuexing/15410/p0/traceback/traceback_internal2.h:34: Warning: Member BUF_SIZE (define) of file traceback_internal2.h is not documented.
+/afs/andrew.cmu.edu/usr20/yuexing/15410/p0/traceback/traceback_internal2.h:36: Warning: Member CHAR_SIZE (define) of file traceback_internal2.h is not documented.
+/afs/andrew.cmu.edu/usr20/yuexing/15410/p0/traceback/traceback_internal2.h:37: Warning: Member INT_SIZE (define) of file traceback_internal2.h is not documented.
+/afs/andrew.cmu.edu/usr20/yuexing/15410/p0/traceback/traceback_internal2.h:38: Warning: Member FLOAT_SIZE (define) of file traceback_internal2.h is not documented.
+/afs/andrew.cmu.edu/usr20/yuexing/15410/p0/traceback/traceback_internal2.h:39: Warning: Member DOUBLE_SIZE (define) of file traceback_internal2.h is not documented.
+/afs/andrew.cmu.edu/usr20/yuexing/15410/p0/traceback/traceback_internal2.h:40: Warning: Member PTR_SIZE (define) of file traceback_internal2.h is not documented.
+/afs/andrew.cmu.edu/usr20/yuexing/15410/p0/traceback/traceback_internal2.h:43: Warning: Member get_funct(void *ret, void *ebp, char *str) (function) of file traceback_internal2.h is not documented.
+/afs/andrew.cmu.edu/usr20/yuexing/15410/p0/traceback/traceback_internal2.h:45: Warning: Member print_function(const functsym_t *pfunct, void *ebp, char *strfunct) (function) of file traceback_internal2.h is not documented.
+/afs/andrew.cmu.edu/usr20/yuexing/15410/p0/traceback/traceback_internal2.h:46: Warning: Member print_args(const argsym_t *args, void *ebp, char *strargs) (function) of file traceback_internal2.h is not documented.
+/afs/andrew.cmu.edu/usr20/yuexing/15410/p0/traceback/traceback_internal2.h:47: Warning: Member print_arg(const argsym_t *arg, void *ebp, char *strarg) (function) of file traceback_internal2.h is not documented.
+/afs/andrew.cmu.edu/usr20/yuexing/15410/p0/traceback/traceback_internal2.h:48: Warning: Member print_str(const char *pstr, char *str, int type) (function) of file traceback_internal2.h is not documented.
+/afs/andrew.cmu.edu/usr20/yuexing/15410/p0/traceback/traceback_internal2.h:49: Warning: Member print_char(char *pChar, char *str) (function) of file traceback_internal2.h is not documented.
+/afs/andrew.cmu.edu/usr20/yuexing/15410/p0/traceback/traceback_internal2.h:50: Warning: Member print_str_arr(char **pstrarr, char *str) (function) of file traceback_internal2.h is not documented.
+/afs/andrew.cmu.edu/usr20/yuexing/15410/p0/traceback/traceback_internal2.h:51: Warning: Member is_print_name(const char *str, int type, char *msg) (function) of file traceback_internal2.h is not documented.
+/afs/andrew.cmu.edu/usr20/yuexing/15410/p0/traceback/traceback_internal2.h:52: Warning: Member is_print_strvalue(const char *str, char *msg) (function) of file traceback_internal2.h is not documented.
+/afs/andrew.cmu.edu/usr20/yuexing/15410/p0/traceback/traceback_internal2.h:53: Warning: Member is_valid_unit(const void *addr, int type) (function) of file traceback_internal2.h is not documented.
+/afs/andrew.cmu.edu/usr20/yuexing/15410/p0/traceback/traceback_internal2.h:54: Warning: Member is_align(const void *addr, int type) (function) of file traceback_internal2.h is not documented.
+/afs/andrew.cmu.edu/usr20/yuexing/15410/p0/traceback/traceback_internal2.h:55: Warning: Member is_main(const functsym_t *funct) (function) of file traceback_internal2.h is not documented.
+/afs/andrew.cmu.edu/usr20/yuexing/15410/p0/traceback/traceback_internal2.h:56: Warning: Member tb_exit() (function) of file traceback_internal2.h is not documented.
+/afs/andrew.cmu.edu/usr20/yuexing/15410/p0/traceback/traceback_internal2.h:57: Warning: Member close_res() (function) of file traceback_internal2.h is not documented.
+/afs/andrew.cmu.edu/usr20/yuexing/15410/p0/traceback/traceback_internal2.h:62: Warning: Member tmp_file (variable) of file traceback_internal2.h is not documented.
+/afs/andrew.cmu.edu/usr20/yuexing/15410/p0/traceback/traceback_internal2.h:64: Warning: Member tmp_fd (variable) of file traceback_internal2.h is not documented.
+/afs/andrew.cmu.edu/usr20/yuexing/15410/p0/traceback/traceback_internal2.h:65: Warning: Member fptr (variable) of file traceback_internal2.h is not documented.
+/afs/andrew.cmu.edu/usr20/yuexing/15410/p0/traceback/traceback_internal2.h:66: Warning: Member format[BUF_SIZE] (variable) of file traceback_internal2.h is not documented.
+/afs/andrew.cmu.edu/usr20/yuexing/15410/p0/traceback/traceback_internal2.h:67: Warning: Member str[BUF_SIZE] (variable) of file traceback_internal2.h is not documented.
+/afs/andrew.cmu.edu/usr20/yuexing/15410/p0/traceback/traceback_internal2.h:68: Warning: Member msg_out_bound (variable) of file traceback_internal2.h is not documented.
+/afs/andrew.cmu.edu/usr20/yuexing/15410/p0/traceback/traceback_internal2.h:70: Warning: Member msg_not_align (variable) of file traceback_internal2.h is not documented.
+/afs/andrew.cmu.edu/usr20/yuexing/15410/p0/traceback/traceback_internal2.h:72: Warning: Member msg_not_print (variable) of file traceback_internal2.h is not documented.
+/afs/andrew.cmu.edu/usr20/yuexing/15410/p0/tests/verify_test.c:14: Warning: Member f4(int i, float f) (function) of file verify_test.c is not documented.
+/afs/andrew.cmu.edu/usr20/yuexing/15410/p0/tests/verify_test.c:19: Warning: Member f3(char c, char *str) (function) of file verify_test.c is not documented.
+/afs/andrew.cmu.edu/usr20/yuexing/15410/p0/tests/verify_test.c:24: Warning: Member f2(void) (function) of file verify_test.c is not documented.
+/afs/andrew.cmu.edu/usr20/yuexing/15410/p0/tests/verify_test.c:29: Warning: Member f1(char **array) (function) of file verify_test.c is not documented.
+/afs/andrew.cmu.edu/usr20/yuexing/15410/p0/tests/verify_test.c:34: Warning: Member main() (function) of file verify_test.c is not documented.
+/afs/andrew.cmu.edu/usr20/yuexing/15410/p0/traceback/traceback_internal.h:45: Warning: Member type (variable) of class argsym_t is not documented.
+/afs/andrew.cmu.edu/usr20/yuexing/15410/p0/traceback/traceback_internal.h:48: Warning: Member offset (variable) of class argsym_t is not documented.
+/afs/andrew.cmu.edu/usr20/yuexing/15410/p0/traceback/traceback_internal.h:51: Warning: Member name[ARGS_MAX_NAME] (variable) of class argsym_t is not documented.
+/afs/andrew.cmu.edu/usr20/yuexing/15410/p0/traceback/traceback_internal.h:59: Warning: Member addr (variable) of class functsym_t is not documented.
+/afs/andrew.cmu.edu/usr20/yuexing/15410/p0/traceback/traceback_internal.h:62: Warning: Member name[FUNCTS_MAX_NAME] (variable) of class functsym_t is not documented.
+/afs/andrew.cmu.edu/usr20/yuexing/15410/p0/traceback/traceback_internal.h:65: Warning: Member args[ARGS_MAX_NUM] (variable) of class functsym_t is not documented.

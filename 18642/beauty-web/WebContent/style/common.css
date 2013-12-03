@@ -1,0 +1,64 @@
+body{
+	background: #E9EEF2;
+}
+
+.container {
+	width: 960px;
+	margin: 10px auto;
+}
+
+.nav{
+	padding  : 0px;
+}
+
+.nav li{
+	margin-right: 20px;
+	list-style: none;
+	float: left;
+}
+
+table {
+	border-collapse: collapse;
+	border-spacing: 0;
+}
+
+table.list td,table.list th {
+	border: 1px solid #ccc;
+	padding: 3px 5px 1px;
+}
+
+input[type="text"]{
+	padding: 3px 2px 1px;
+	min-width: 100px;
+}
+
+select{
+	min-width: 100px;
+}
+
+/** clear **/
+.clearfix:after {
+	content: ".";
+	display: block;
+	height: 0;
+	clear: both;
+	visibility: hidden;
+}
+
+/* ie haslayout*/
+.clearfix {
+	zoom: 1;
+	clear: both;
+}
+
+.clear {
+	clear: both;
+}
+
+table.list th {
+	background: 0xddd;
+}
+
+table.list tr.even {
+	background: 0xeee;
+}

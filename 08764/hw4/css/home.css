@@ -1,0 +1,134 @@
+/**
+* @file base.css
+* @description reset & base
+* @author: Yue Xing, yuexing@andrew.cmu.edu, 08764
+*/
+.xbar {
+    background: url("../images/zbar.gif") no-repeat scroll 0 0 transparent;
+    margin-bottom: 21px;
+    overflow: hidden;
+    width: 100%;
+}
+.xbar div {
+    background: url("../images/zbar.gif") no-repeat scroll right top transparent;
+    float: right;
+    margin-left: 5px;
+    padding-right: 35px;
+}
+.xbar a {
+    display: block;
+    float: right;
+    line-height: 14px;
+    margin: 5px 5px 1px;
+    padding: 3px 5px 2px;
+    text-decoration: none;
+}
+.xbar .now {
+    background: url("../images/wztab.gif") no-repeat scroll right top transparent;
+    display: block;
+    float: right;
+    margin: 0 5px;
+    padding: 0 10px 0 0;
+    line-height: 20px;
+    
+}
+.xbar .now span {
+    background: url("../images/wztab.gif") no-repeat scroll 0 0 transparent;
+    display: block;
+    padding: 6px 1px 5px 11px;
+}
+.lcol {
+    float: left;
+    width: 590px;
+    border-right:1px dashed #EEE; 
+}
+.rcol {
+    float: right;
+    width: 300px;
+    margin-top:120px;
+}
+.rcol .g-box2{
+    margin-left:10px;
+}
+.entry-list{
+    margin-right:20px;
+    width:570px;
+}
+.grey{
+    margin-right:20px;
+}
+.base .entry-list li,.friends .entry-list li{
+    border-bottom: none;
+}
+.base .entry-list .info,.friends .entry-list .info{
+    width:430px;
+}
+.base .entry-list dt,.friends .entry-list dt{
+    width:100px;
+}
+.base .entry-list dd,.friends .entry-list dd{
+    width:330px;
+}
+.wall .entry-list .info{
+    width: 500px;
+}
+.wall1 .entry-list li:hover{
+    background:rgba(0, 132, 180, 0.1);
+    border-color:rgba(0, 132, 180, 0.15);
+    cursor:pointer;
+}
+.commentutil li{
+    display: block;
+    border-width: 1px 0 0 0;
+    background-color: #EDEFF4;
+    border-bottom: 1px solid #D2D9E7 !important;
+    margin-top: 1px;
+    padding: 5px 5px 4px;
+}
+.commentutil .comments{
+    padding:0px;
+}
+.commentutil li:first-child {
+    border-width: 0;
+}
+.comments li img{
+    float:left;
+}
+.comment{
+    width:430px;
+    margin-right:10px;
+    float:right;
+} 
+.comments li h4{
+    font-weight:normal;
+}
+.search-box{
+    float: left;
+    border: 1px solid #CCCCCC;
+    padding: 3px 2px;
+    width: 200px;
+    vertical-align: middle;
+}
+.search .g-box{
+    margin-left:20px;
+}
+.commentutil{
+    padding-top: 2px;
+}
+.commentutil .arrow i{
+    background-image: url("../images/arrow.png");
+    background-repeat: no-repeat;
+    background-position: 0 0;
+    display: block;
+    height: 5px;
+    margin-left: 17px;
+    width: 9px;
+    margin-top: -10px;
+}
+.wall .description{
+    margin-bottom:0px;
+}
+.description a{
+    display:inline-block;
+    margin-left:10px;
+}

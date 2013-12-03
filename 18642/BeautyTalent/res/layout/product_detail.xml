@@ -1,0 +1,325 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:id="@+id/commoditydetail_layout"
+    android:layout_width="fill_parent"
+    android:layout_height="fill_parent"
+    android:background="@color/white"
+    android:orientation="vertical" >
+
+    <include
+        android:id="@+id/title"
+        layout="@layout/title" />
+
+    <include
+        android:id="@+id/bottommenu"
+        layout="@layout/common_bottom" />
+    
+    <!-- included as ListActivity -->
+    <include layout="@layout/common_listview" />
+
+    <ScrollView
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content"
+        android:layout_above="@id/bottommenu"
+        android:layout_below="@id/title"
+        android:fadingEdge="none" >
+
+        <LinearLayout
+            android:layout_width="fill_parent"
+            android:layout_height="wrap_content"
+            android:background="@color/white"
+            android:orientation="vertical" >
+
+            <ImageView
+                android:id="@+id/product_image"
+                android:layout_width="fill_parent"
+                android:layout_height="220dp" />
+
+            <LinearLayout
+                android:layout_width="fill_parent"
+                android:layout_height="wrap_content"
+                android:layout_margin="5dp"
+                android:background="@drawable/bg4"
+                android:gravity="center"
+                android:orientation="vertical" >
+
+                <TextView
+                    android:id="@+id/product_name"
+                    android:layout_width="fill_parent"
+                    android:layout_height="wrap_content"
+                    android:gravity="center"
+                    android:textAppearance="?android:attr/textAppearanceSmall"
+                    android:textColor="@color/spikearedetail_productname_color"
+                    android:textSize="14sp"
+                    android:textStyle="bold" />
+
+                <!-- rate -->
+                <LinearLayout
+                    android:layout_width="fill_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginBottom="5dip"
+                    android:orientation="horizontal"
+                    android:paddingLeft="10dip"
+                    android:visibility="visible" >
+
+                    <TextView
+                        android:layout_width="85dip"
+                        android:layout_height="wrap_content"
+                        android:gravity="left"
+                        android:text="@string/label_product_rate"
+                        android:textColor="@color/pink"
+                        android:textSize="14sp" />
+
+                    <TextView
+                        android:id="@+id/product_rate"
+                        android:layout_width="fill_parent"
+                        android:layout_height="wrap_content"
+                        android:gravity="left"
+                        android:textColor="@color/pink"
+                        android:textSize="18sp" />
+                </LinearLayout>
+            </LinearLayout>
+
+            <!-- your rate -->
+
+            <LinearLayout
+                android:layout_width="fill_parent"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal"
+                android:paddingLeft="10dip" >
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="center_vertical"
+                    android:text="@string/label_your_rate"
+                    android:textColor="@color/home_list_color"
+                    android:textSize="14sp" />
+
+                <RatingBar
+                    android:id="@+id/cur_rate"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:numStars="5"
+                    android:rating="2.1"
+                    android:stepSize="1.0"
+                    style="?android:attr/ratingBarStyleSmall"
+                    android:isIndicator="false" />
+            </LinearLayout>
+
+            <!-- btn -->
+            <LinearLayout
+                android:layout_width="fill_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="10dip"
+                android:gravity="center_horizontal"
+                android:orientation="horizontal" >
+
+                <Button
+                    android:id="@+id/btn_view_map"
+                    android:layout_width="145dip"
+                    android:layout_height="wrap_content"
+                    android:layout_marginRight="10dip"
+                    android:background="@drawable/btn_pink"
+                    android:gravity="center"
+                    android:text="@string/view_map"
+                    android:textColor="@color/white"
+                    android:textSize="18sp" />
+
+                <Button
+                    android:id="@+id/btn_read_review"
+                    android:layout_width="145dip"
+                    android:layout_height="wrap_content"
+                    android:background="@drawable/btn_blue"
+                    android:gravity="center"
+                    android:text="@string/read_review"
+                    android:textColor="@color/white"
+                    android:textSize="18sp" />
+            </LinearLayout>
+
+            <!-- menu info -->
+
+            <LinearLayout
+                android:layout_width="fill_parent"
+                android:layout_height="wrap_content"
+                android:layout_margin="5dip"
+                android:background="@drawable/bg4"
+                android:orientation="vertical"
+                android:paddingLeft="10dip"
+                android:paddingRight="10dip" >
+
+                <TextView
+                    android:layout_width="fill_parent"
+                    android:layout_height="wrap_content"
+                    android:gravity="center"
+                    android:paddingBottom="5dip"
+                    android:text="@string/label_manu_info"
+                    android:textAppearance="?android:attr/textAppearanceSmall"
+                    android:textColor="@color/spikearedetail_productname_color"
+                    android:textSize="14sp" />
+
+                <ImageView
+                    android:id="@+id/gallery_line"
+                    android:layout_width="fill_parent"
+                    android:layout_height="1dip"
+                    android:background="@color/note_gray" />
+
+                <LinearLayout
+                    android:layout_width="fill_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="horizontal"
+                    android:paddingBottom="5dip"
+                    android:paddingTop="5dip" >
+
+                    <TextView
+                        android:layout_width="65dip"
+                        android:layout_height="wrap_content"
+                        android:gravity="left"
+                        android:text="@string/label_product_brand"
+                        android:textColor="@color/spikearedetail_productname_color"
+                        android:textSize="12sp" />
+
+                    <TextView
+                        android:id="@+id/product_brand"
+                        android:layout_width="fill_parent"
+                        android:layout_height="wrap_content"
+                        android:gravity="left"
+                        android:textColor="@color/home_list_color"
+                        android:textSize="12sp" />
+                </LinearLayout>
+
+                <LinearLayout
+                    android:layout_width="fill_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="horizontal"
+                    android:paddingBottom="5dip"
+                    android:paddingTop="5dip" >
+
+                    <TextView
+                        android:layout_width="65dip"
+                        android:layout_height="wrap_content"
+                        android:gravity="left"
+                        android:text="@string/label_product_category"
+                        android:textColor="@color/spikearedetail_productname_color"
+                        android:textSize="12sp" />
+
+                    <TextView
+                        android:id="@+id/product_category"
+                        android:layout_width="fill_parent"
+                        android:layout_height="wrap_content"
+                        android:gravity="left"
+                        android:textColor="@color/home_list_color"
+                        android:textSize="12sp" />
+                </LinearLayout>
+
+                <LinearLayout
+                    android:layout_width="fill_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="horizontal"
+                    android:paddingBottom="5dip"
+                    android:paddingTop="5dip" >
+
+                    <TextView
+                        android:layout_width="65dip"
+                        android:layout_height="wrap_content"
+                        android:gravity="left"
+                        android:text="@string/label_product_benefits"
+                        android:textColor="@color/spikearedetail_productname_color"
+                        android:textSize="12sp" />
+
+                    <TextView
+                        android:id="@+id/product_benefits"
+                        android:layout_width="fill_parent"
+                        android:layout_height="wrap_content"
+                        android:gravity="left"
+                        android:textColor="@color/home_list_color"
+                        android:textSize="12sp" />
+                </LinearLayout>
+
+                <LinearLayout
+                    android:layout_width="fill_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="horizontal"
+                    android:paddingBottom="5dip"
+                    android:paddingTop="5dip" >
+
+                    <TextView
+                        android:layout_width="65dip"
+                        android:layout_height="wrap_content"
+                        android:gravity="left"
+                        android:text="@string/label_product_tags"
+                        android:textColor="@color/spikearedetail_productname_color"
+                        android:textSize="12sp" />
+
+                    <TextView
+                        android:id="@+id/product_tags"
+                        android:layout_width="fill_parent"
+                        android:layout_height="wrap_content"
+                        android:gravity="left"
+                        android:textColor="@color/home_list_color"
+                        android:textSize="12sp" />
+                </LinearLayout>
+
+                <LinearLayout
+                    android:layout_width="fill_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="horizontal"
+                    android:paddingBottom="5dip"
+                    android:paddingTop="5dip" >
+
+                    <TextView
+                        android:layout_width="65dip"
+                        android:layout_height="wrap_content"
+                        android:gravity="left"
+                        android:text="@string/label_product_intro"
+                        android:textColor="@color/spikearedetail_productname_color"
+                        android:textSize="12sp" />
+
+                    <TextView
+                        android:id="@+id/product_intro"
+                        android:layout_width="fill_parent"
+                        android:layout_height="wrap_content"
+                        android:gravity="left"
+                        android:textColor="@color/home_list_color"
+                        android:textSize="12sp" />
+                </LinearLayout>
+
+                <LinearLayout
+                    android:layout_width="fill_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="horizontal"
+                    android:paddingBottom="5dip"
+                    android:paddingTop="5dip" >
+
+                    <TextView
+                        android:layout_width="65dip"
+                        android:layout_height="wrap_content"
+                        android:gravity="left"
+                        android:text="@string/label_product_price"
+                        android:textColor="@color/spikearedetail_productname_color"
+                        android:textSize="12sp" />
+
+                    <TextView
+                        android:id="@+id/product_price"
+                        android:layout_width="fill_parent"
+                        android:layout_height="wrap_content"
+                        android:gravity="left"
+                        android:textColor="@color/home_list_color"
+                        android:textSize="12sp" />
+                </LinearLayout>
+
+                <Button
+                    android:id="@+id/btn_add_fav"
+                    android:layout_width="150dip"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="center_horizontal"
+                    android:background="@drawable/btn_blue"
+                    android:gravity="center"
+                    android:text="@string/add_fav"
+                    android:textColor="@color/white"
+                    android:textSize="18sp" />
+            </LinearLayout>
+        </LinearLayout>
+    </ScrollView>
+
+</RelativeLayout>

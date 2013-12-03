@@ -1,0 +1,57 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="fill_parent"
+    android:layout_height="fill_parent"
+    android:background="#ffffff"
+    android:orientation="vertical" >
+
+    <include
+        android:id="@+id/title"
+        layout="@layout/title" />
+
+    <include
+        android:id="@+id/bottommenu"
+        layout="@layout/common_bottom" />
+    <!-- fake -->
+
+    <include layout="@layout/common_listview" />
+
+    <LinearLayout
+        android:layout_width="fill_parent"
+        android:layout_height="fill_parent"
+        android:layout_above="@id/bottommenu"
+        android:layout_below="@id/title"
+        android:orientation="vertical" >
+
+        <Spinner
+            android:id="@+id/spinner_menu_mode"
+            android:layout_width="fill_parent"
+            android:layout_height="wrap_content"
+            android:drawSelectorOnTop="true" />
+
+        <LinearLayout
+            android:layout_width="fill_parent"
+            android:layout_height="wrap_content"
+            android:gravity="center_horizontal"
+            android:orientation="horizontal" >
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="@string/label_search_query_prefill" />
+
+            <EditText
+                android:id="@+id/txt_query_prefill"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:maxEms="10"
+                android:minEms="10" />
+        </LinearLayout>
+
+        <Button
+            android:id="@+id/btn_start_search"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="@string/label_onsearchrequested" />
+    </LinearLayout>
+</RelativeLayout>

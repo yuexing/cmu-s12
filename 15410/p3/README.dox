@@ -1,0 +1,289 @@
+/**
+
+@mainpage 15-410 Project 3
+
+@author Yue Xing (yuexing)
+
+1. Overview
+This document introduces the kernel built for P3 of 15410 F2012
+during the winter break for an incomplete grade. Impelementaion
+is all under the folder of kern/. And the kern/ is organized as
+follows:
+
+kernel.c:
+kernel_main() which will be called after bootstrap is defined in
+this file. The function follows the 9.4 Kernel Initialization of 
+the handout. For more details see Boot.
+
+inc/:
+The folder contains header files used by the kernel. Every module
+has its own .h file(s), eg. module of physical memory has frames.h,
+while module of virtual memory declares its prototypes in vm.h.
+Some module possesses a module_type.h which encapsulate the data
+structures needed for this module. All the .h files are then included
+in kernel_defines.h.
+
+Note: Here exists a trade-off. Since all .c file will include this huge
+kernel_defines.h, thus the binary file will be filled with unuseful
+declarations unless the compiler do some optimization. However, this code
+organization benefits coder :)
+
+console/ :
+The folder contains the implementation of the console driver. The code 
+is taken from P1.
+
+exception/ :
+The folder contains the implementation for exception handlers. There 
+are two types of handlers, namely, the basic handler which simply
+kill the thread and display infors; the pagefault handler which 
+launches the swexn handler if there is.
+
+frame/ :
+The folder contains the implementaion of physical memory management. I
+still applied the bit-set and the next-fit algorithm.
+
+handler/ :
+The folder contains the implementation of interrupt/exception handler
+idt registration and software routine registration. More details 
+follows.
+
+kb/ :
+The folder contains the implementation of keyboard driver. The code is
+very different from P1. When there is a thread waiting for a line or a
+char, the keyboard interrupt handler will process a char, echo the char,
+and push the char into a queue. Once a '\n' arrives under waiting
+line, or a char arrives under waiting char, the keyboard handler
+will try context switch. If this try fails, a pending thread is added.
+Only when the waiting thread has copied a line or readed a char, the 
+queue is cleared.
+
+kthread/ :
+The folder contains the kernel level thread implementation. A thread is
+modled as a PAGE_SIZE memory area in lower 16M. The memory is splited 
+into tcb and a kernel stack. A canary is applied to check whether a 
+thread is conpromised. More details related to creation, destruction
+follows.
+
+loader/ :
+The folder contains the implementation related to loading user program.
+When the loader module is initialized, it documentated the infor asked
+by 'ls' syscall. The loader is in charge of loading a program into a 
+page dir by load_program().
+
+locks/ :
+The folder contains kernel mutex implementaion. It has 3 types of locks.
+Namely, varlock which is implemented under the assumption that there
+is no context switch and is applied by var assignment. The varlock is
+used for disable/enable ctx_switch; xchglock which is typical and 
+implemented by xchg and yield; block (block-lock) which is implemented 
+by disable/enable ctx_switch and block/unblock.
+
+malloc/ :
+The folder contains the thread-safe kernel level dynamic memory 
+allocator.
+
+process/ :
+The folder contains the proces-related code. More details follows.
+
+scheduler/ :
+The folder contains the implementation related to scheduling. More
+details follows.
+
+syscall/ :
+The folder contains the implementation of syscall handlers. The 
+syscalls are organised into 5 types: IO, memroy, misc, process,
+and thread. Each syscall handler is responsible for extracting
+argument(s) from ureg->esi, checking the validity of argument(s),
+executing, setting ureg->eax and returning. If there is a failure,
+all will be rolled back.
+
+timer/ :
+The folder contains the implementation related to timer. The code
+is taken from P1.
+
+vm/ :
+The folder contains the implementaton of paging. The paging is
+implemented by 2-level page tables, namely page dir and page table.
+The functionality of VM includes new/free PAGE_SIZE page, new/free
+page table, new/free severl pages(the implementation of new_pages,
+remove_pages), etc.
+
+2. Process and Thread 
+2.1 Model:
+A process basically consists of a page directory, a main thread.
+A multi-thread process (which has called thread_fork during its 
+lifetime) has a thread list.
+A process which has called fork during its lifetime has running
+children processes and zombie children processes waiting to be
+reaped.
+
+A thread is actually a PAGE_SIZE memory area within 16M V=P region.
+The area contains a tcb and the kernel stack for this thread. A 
+tcb contains the entry_point(eip) for the program, the esp pointed
+to a pusha area waiting for popa, a unique id, a status, a swexn_t,
+a canary, and a pointer to the pcb it belongs to.
+
+A thread has to be in 2 queues at the same time. One is the queue of 
+the scheduler, one is the queue of the process it belongs to. Thus,
+a thread contains a schedule_node_t and a pcb_node_t.
+
+2.2 Creation:
+Typically, a process is born from the syscalls fork and exec. More 
+details follows. The special process idle and init is born from
+the load() function in kernel.c. More details follows in the Boot.
+
+The process forked will be add_child() to the process the current
+thread belonging to.
+
+A thread which is born with the process is called the main thread
+of the process. Other threads are born from thread_fork will be 
+add_thr() to that process.
+
+2.4 Activity:
+During the lifetime of a thread, it will execute the .txt instructions,
+which may invoke system calls such as fork, thread_fork, exec, sleep,
+deschedule, make_runnable, yield, wait and vanish. Calls of fork will 
+lead to add_child() of the process which it belongs to. Calls of 
+fork_thread() will lead to add_thr() of the process which it belongs
+to. Calls of exec will restart its life. Calls of sleep will add itself
+to the sleep queue waiting for that ticks is up. Calls of deschedule/
+make_runnable will cause a thread in/out of block queue. Calls of yield
+will schedule another runnable thread. Calls of vanish will lead to
+terminate() and may lead to destory_pcb().
+
+2.3 Destruction:
+
+The last thread in the process calling vanish() will destroy_proc() the
+whole process.
+
+Destruction of a process involves distroying current page dir, moving
+all its running, zombie children to process 'init', calling add_zombie()
+of its parent.
+
+There is a race in this procedure. A child calls its parent's add_zombie
+(), however, its parent may be vanishing which indicates the child's
+moving itself to its parent's zombie_queue should be atomically done
+isolated from the change of the 'parent' field or the none-existence
+of its parent. A simple strategy using global_lock is applied here.
+
+Destruction of a thread involves setting its esp to the middle of the
+first page of the global tmp_dir, freeing its PAGE_SIZE area, and 
+switching to other thread without adding itself to the run queue of 
+scheduler.
+
+The case a timer interrupt happening during this procedure is handled
+by splitting the area executing handler code and the 4-byte area for
+tracking the saved_esp.
+
+3. Interrupt/Exception Handling
+3.1 IDT install
+The idt installation is completed during the kernel_main's 
+init_mod_handler(). The function installs all handlers for interrupt,
+exception, and syscalls. Except for timer, keyboard, and page_fault,
+which are installed as interrupt gate, the others are installed as trap
+gate.This is because when the processor accesses a handler through an 
+interrupt gate, it will defer all further interrupts until the current
+handler returns(iret), which benefits the organization of context 
+switch.
+
+3.2 Handler wrapper
+All idt handler routines except handle_fork and handle_thread_fork are
+named with pattern handle_no_errorcodeX and handle_errorcodeX (here, X
+is the idt number, also the cause of ureg_t). These routines are handler
+wrappers which make a ureg_t on the kernel stack and call handle(ureg_t)
+. The function handle() will dispatch the call according to the ureg_t->
+cause.
+
+handle_fork and handle_thread_fork is different because they need to set
+up a return address and a pusha area for later ctx_switch. 
+
+handle_fork calls dummy_fork(ureg_t), which calls kfork_wrapper(ureg_t*).
+In the kfork_wrapper, the function set up the return address(after_fork)
+and pusha area. Now it is ready for kfork(ureg_t* ureg, void* saved_esp).
+
+The same for handle_thread_fork.
+
+4. Locks
+Locks is give the highest priority when I started re-implementing the 
+kernel.
+
+4.1 Locks
+varlock: It is designed as the controller of context switch. There are 3
+cases that a context switch is needed: 1) time is up to schedule another
+runnable thread and store the current one into run queue; 2) keyboard
+needs to schedule the waiting thread; 3) a thread would like to sleep,
+yield, wait, deschedule/make_runnable, be locked or vanish. 
+
+A context switch relates to from_to (in/out of queue(s)), ctx_switch(pusha,
+and popa). The varlock help implement the function calls enable/disable/
+try ctx_switch. These function calls enables that at any time, there will 
+be at most one thread/timer/keyboard is doing ctx_switch.
+
+The situation the varlock applies to make it free of xchg-code.
+
+block: It is short for block-style lock. A thread fails to get the lock
+will be blocked to the queue of the block, and the holder will be scheduled
+instead. This lock is used for mutual exclusion in the kernel.
+
+xchglock: It is the yield-version of mutex and is mainly designed for 
+kcond (condition variable). More details follows.
+
+4.2 Condition variable
+
+block supported kcond will lock context-switch-lock twice.
+
+5. Important syscall
+
+5.1 fork and exec
+
+Fork and exec does not support the multi-thread process.
+
+To make it simple and fair, I did not use lazy loading, instead 
+allocate resource all at once. This will prevent the effort of
+tracking pages even the process has vanished and prevent the 
+situation in which a thread is killed because of the page fault 
+handler find out there is no space for .txt even the exec call 
+has returned with a SUCCESS.
+
+5.2 wait
+
+Each process has a zombie queue and a unwaited_cnt. The cnt is only
+affected by fork and wait. 
+
+A waiting thread of the process decrements the process's unwaited_cnt
+, and the thread basically kcond_wait() until the zombie queue is 
+not empty, which is triggered by a kcond_signal() by some other thread.
+The waken thread can get zombie and reap it.
+
+5.3 sleep
+
+ksleep() the software routine of sleep() is done by calculating
+the estimated ticks when the thread is to be waken up, adding the
+thread to the sleep queue. The sleep queue is maintained in increasing
+order of ticks. Once there is a chance for the timer to run, the timer
+will adjust_sleeq() by inserting the runnable sleeping thread to the 
+front of runnable queue. 
+
+5.4 readline
+
+Readline will indicate the will to readline by calling wait_line() of
+the keyboard module. Only when there is a waiting thread, does the
+keyboard process a char, echo the char and push the char into key buffer.
+If a '\n' arrives, the keyboard will try ctx_switch or set the pending_thr
+if the try fails. Pending_thr is checked at the end of ctx_switch.
+
+5.5 new_pages and remove_pages
+
+Apply the 9th and 10th bit of the page table entry to track the START
+and the END of the allocated region. The allocating and freeing procedure
+is done atomacally by locking the process's dir_lock.
+
+6. Boot
+
+Booting involves initializing modules, setting up the global tmp_dir and 
+its block for later usage, setting up the thr_idle for later ctx_switch, 
+loading the proc_init and running proc_init's main thread.
+
+7. Thanks
+
+*/

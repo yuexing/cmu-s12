@@ -1,0 +1,41 @@
+/**
+* @file base.css
+* @description reset & base
+* @author: Yue Xing, yuexing@andrew.cmu.edu, 08764
+*/
+h2{
+    color: #494949;
+    font-size: 26px;
+    font-weight: normal;
+    margin-bottom:30px
+}
+.signin{
+    width:310px;
+    padding:130px 25px;
+    float:left;
+}
+.signin .g-box2{
+    display: inline-block;
+    margin-left:20px;
+}
+.signup{ 
+    float:left;
+    width:520px;
+    color:#666666;
+    font-size:14px;
+    line-height:24px;   
+    border-right:1px dashed #EEE; 
+}
+.signup .g-box{
+    margin-top: 2px;
+    vertical-align: middle;
+}
+.signup .reset{
+    margin-left:30px;
+    cursor: pointer;
+    font-size: 14px;
+    height: 28px;
+    line-height: 28px;
+    padding-bottom: 3px;
+    width: 80px;
+}

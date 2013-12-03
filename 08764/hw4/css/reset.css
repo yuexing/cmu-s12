@@ -1,0 +1,57 @@
+/**
+* @file base.css
+* @description reset & base
+* @author: Yue Xing, yuexing@andrew.cmu.edu, 08764
+*/
+@charset "utf-8";
+
+body, h1, h2, h3, h4, h5, h6, hr, p, blockquote, /* structural elements  */
+dl, dt, dd, ul, ol, li, /* list elements  */
+pre, /* text formatting elements  */
+form, fieldset, legend, button, input, textarea, /* form elements */
+th, td /* table elements */ {
+    margin: 0;
+    padding: 0;
+}
+/** 
+ * \5FAE\8F6F\96C5\9ED1 
+ * \5b8b\4f53
+**/
+body,
+button, input, select, textarea /* for ie */ {
+   font: 12px/1.5 arial, \5b8b\4f53, sans-serif;
+}
+h1, h2, h3, h4, h5, h6 { font-size: 100%; }
+address, cite, dfn, em, var { font-style: normal; }
+code, kbd, pre, samp { font-family: courier new, courier, monospace; } 
+small { font-size: 12px; } /** 12px is always better**/
+
+/** reset list-style **/
+ul, ol { list-style: none; }
+
+/** reset link **/
+a {text-decoration: none; }
+a:hover { text-decoration: underline; }
+
+sup { vertical-align: text-top; } /* reset sup, sub in case of impact on line-height */
+sub { vertical-align: text-bottom; }
+
+/** reset form **/
+legend { color: #000; } /* for ie6 */
+fieldset, img { border: 0; } /* img no border */
+button, input, select, textarea { font-size: 100%; } /* for ie  */
+
+/** reset table **/
+table { border-collapse: collapse; border-spacing: 0; }
+/** clear **/
+.clearfix:after {
+ content: ".";
+ display: block;
+ height: 0;
+ clear: both;
+ visibility: hidden;
+}
+/* ie haslayout*/
+.clearfix {zoom:1; clear:both;}
+.clear{clear:both;}
+

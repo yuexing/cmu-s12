@@ -1,0 +1,266 @@
+﻿/**
+* @file base.css
+* @description reset & base
+* @author: Yue Xing, yuexing@andrew.cmu.edu, 08764
+*/
+/*font*/
+h2, h3, h4{
+    line-height:30px;
+}
+h5{
+    line-height:20px;
+}
+h2{
+    font-size:26px;
+}
+h3{
+    font-size:18px;
+}
+h4{
+    font-size:14px;
+}
+h5{
+    font-size:13px;
+}
+/* module*/
+.top-nav{
+    border-bottom: 1px dashed #D4D4D4;
+    height: 30px;
+    margin-bottom: 20px;
+    width: 100%;
+    float: left;
+    font-size: 12px;
+    margin-top: 3px;
+}
+.top-nav .bd{
+    margin: 0 auto;
+    width: 900px;
+}
+.top-nav-items{
+    margin-top: 3px;
+    float: left;
+}
+.top-nav li {
+    float: left;
+    margin: 2px 20px 0 0;
+}
+.top-nav a{
+    color:#566D5E;
+}
+.wrapper{
+width:900px;
+margin:0px auto;
+}
+.head h1{
+float:left;
+}
+.head h1 a{
+text-indent:-9999px;
+height:100px;
+width:240px;
+background: #FFF url("../images/weird.png") no-repeat center -40px;
+display:block;
+}
+.head ul{
+float:right;
+margin: 40px 0px 30px 20px;
+font-size:26px;
+line-height:30px;
+color:#D0D1D2;
+}
+.head li{
+float:left;
+}
+.head li.hotweird,.head li.groups,.head li.aboutus,.head li.chicks{
+margin-left:30px;
+}
+.body{
+margin-top: 20px;
+}
+.description {
+    font-size: 0.85em;
+    color: #8E958E;
+    line-height: 150%;
+    margin-bottom: 0.75em;
+}
+.foot {
+    border-top: 1px dashed #DDDDDD;
+    color: #999999;
+    margin-top: 40px;
+    overflow: hidden;
+    padding-top: 6px;
+}
+.foot span{
+    float:right;
+}
+/*===============
+ * color
+ *===============*/
+.error{
+	color:#f00;
+}
+.green-word{
+    color:#87C9B0;
+}
+.gword{
+    color: #006600;
+}
+.blue-word{
+    color:#3CA0CB;
+}
+.orange-word{
+    color:#F5A423;
+}
+.grey-word{    
+    color:#B6B9BB;
+}
+/* box */
+.grey{
+    background:#E9EEF2;
+}
+.r-box{
+-moz-border-radius: 10px;    
+-webkit-border-radius: 10px;
+border-radius: 10px; /* future proofing */
+-khtml-border-radius: 10px; /* for old Konqueror browsers */
+}
+.rr-box{
+-moz-border-radius: 10px 0 0px 10px;    
+-webkit-border-radius: 10px 0 0px 10px;
+border-radius: 10px 0 0px 10px; /* future proofing */
+-khtml-border-radius: 10px 0 0px 10px; /* for old Konqueror browsers */
+}
+.lr-box{
+-moz-border-radius: 0 10px 10px 0;    
+-webkit-border-radius: 0 10px 10px 0;    
+border-radius: 0 10px 10px 0;     /* future proofing */
+-khtml-border-radius: 0 10px 10px 0;  /* for old Konqueror browsers */
+}
+.g-box2{
+    background: url("../images/gbox.png") no-repeat scroll -120px -4px transparent;
+    border: 0 none;
+    color: #FFFFFF;
+    cursor: pointer;
+    font-size: 14px;
+    height: 28px;
+    line-height: 28px;
+    padding-bottom: 3px;
+    width: 130px;
+}
+.g-box{
+    background: url("../images/gbox.png") no-repeat scroll -23px -4px transparent;
+    border: 0 none;
+    color: #FFFFFF;
+    cursor: pointer;
+    font-size: 14px;
+    height: 28px;
+    line-height: 28px;
+    padding-bottom: 3px;
+    width: 80px;
+}
+
+/*entry-list 
+  |- a
+     |- img: float left(w + h + m)
+  |- info: float right(w + m)
+     |- h4
+     |- dl
+         |- dt, dd: float left(w)
+     |- p
+     |- ul.commentutil
+     |- input: float right
+*/
+.entry-list li{
+    border-bottom: 1px dashed #DDDDDD;
+    padding:10px 0px 17px;
+}
+.entry-list li:last-child{
+    border-width: 0px;
+}
+.entry-list a{
+    color:#336699
+}
+.entry-list img{
+    float:left;
+    padding:5px;
+    border:1px solid #ccc;
+}
+.entry-list .info{
+    float:right;
+}
+.entry-list dt, .entry-list dd{
+    margin-top:5px;
+    float:left;
+}
+.entry-list input{
+    float: right;
+    margin-top: 5px;
+}
+
+/*commentutil for comment*/
+.commentutil{
+    padding-top: 2px;
+}
+.commentutil .arrow i{
+    background-image: url("../images/arrow.png");
+    background-repeat: no-repeat;
+    background-position: 0 0;
+    display: block;
+    height: 5px;
+    margin-left: 17px;
+    width: 9px;
+    margin-top: -10px;
+}
+.commentutil li{
+    display: block;
+    border-width: 1px 0 0 0;
+    background-color: #EDEFF4;
+    border-bottom: 1px solid #D2D9E7 !important;
+    margin-top: 1px;
+    padding: 5px 5px 4px;
+}
+.commentutil .comments{
+    padding:0px;
+}
+.commentutil li:first-child {
+    border-width: 0;
+}
+.comments li img{
+    float:left;
+}
+.comment{
+    width:430px;
+    margin-right:10px;
+    float:right;
+} 
+.comments li h4{
+    font-weight:normal;
+}
+/**/
+.p20{
+    padding:20px;
+}
+/*form*/
+legend{
+    color:#666666;
+}
+fieldset {
+    background: url("../images/gradient.png") repeat-x scroll 0 0 #FFFFFF;
+    border: 1px solid #F4F0F5;
+    margin: 10px 0;
+    padding: 20px;
+}
+form .item{
+    margin-bottom:15px;
+}
+form .item label,fieldset label{
+    float: left;
+    width: 6em;
+}
+form .item input{
+    float: left;
+    border: 1px solid #CCCCCC;
+    padding: 3px 2px;
+    width: 200px;
+    vertical-align: middle;
+}

@@ -1,0 +1,59 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="fill_parent"
+    android:layout_height="fill_parent"
+    android:background="#ffffff"
+    android:orientation="vertical" >
+
+    <include
+        android:id="@+id/title"
+        layout="@layout/title" />
+
+    <include
+        android:id="@+id/bottommenu"
+        layout="@layout/common_bottom" />
+
+    <ScrollView
+        android:id="@+id/common_listview_parent"
+        android:layout_width="fill_parent"
+        android:layout_height="fill_parent"
+        android:layout_above="@id/bottommenu"
+        android:layout_below="@id/title"
+        android:orientation="vertical" >
+
+        <LinearLayout
+            xmlns:android="http://schemas.android.com/apk/res/android"
+            android:layout_width="fill_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical" >
+
+            <!-- fake -->
+
+            <include layout="@layout/common_listview" />
+
+            <TextView
+                android:id="@+id/about_us_text1"
+                android:layout_width="fill_parent"
+                android:layout_height="wrap_content"
+                android:paddingBottom="10dp"
+                android:paddingTop="5dp"
+                android:textSize="17sp" >
+            </TextView>
+
+            <View
+                android:layout_width="fill_parent"
+                android:layout_height="2dip"
+                android:background="#FF909090" />
+
+            <TextView
+                android:id="@+id/about_us_text2"
+                android:layout_width="fill_parent"
+                android:layout_height="wrap_content"
+                android:paddingBottom="10dp"
+                android:paddingTop="5dp"
+                android:textSize="17sp" >
+            </TextView>
+        </LinearLayout>
+    </ScrollView>
+
+</RelativeLayout>

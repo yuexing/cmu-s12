@@ -1,0 +1,154 @@
+<?xml version="1.0" encoding="utf-8"?>
+<manifest xmlns:android="http://schemas.android.com/apk/res/android"
+    package="beauty.android.activity"
+    android:versionCode="1"
+    android:versionName="1.0" >
+
+    <uses-sdk android:minSdkVersion="8" />
+
+    <uses-permission android:name="android.permission.BROADCAST_STICKY" />
+    <uses-permission android:name="android.permission.RECORD_AUDIO" />
+    <uses-permission android:name="android.permission.INTERNET" />
+    <uses-permission android:name="android.permission.PROCESS_OUTGOING_CALLS" />
+    <uses-permission android:name="android.permission.RESTART_PACKAGES" />
+    <uses-permission android:name="android.permission.ACCESS_FINE_LOCATION" />
+    <uses-permission android:name="android.permission.ACCESS_MOCK_LOCATION" />
+    <uses-permission android:name="android.permission.ACCESS_NETWORK_STATE" />
+    <uses-permission android:name="android.permission.WRITE_EXTERNAL_STORAGE" />
+
+    <uses-feature android:name="android.hardware.camera" />
+
+    <application
+        android:name="beauty.android.activity.BeautyApplication"
+        android:icon="@drawable/ic_launcher"
+        android:label="@string/app_name" >
+        <uses-library android:name="com.google.android.maps" />
+
+        <provider
+            android:name="beauty.android.util.SearchSuggestionSampleProvider"
+            android:authorities="beauty.android.util.SearchSuggestionSampleProvider" />
+
+        <meta-data
+            android:name="android.app.default_searchable"
+            android:value=".SearchQueryResults" />
+        <activity
+            android:name=".SearchInvoke"
+            android:label="@string/app_name" >
+            <intent-filter>
+                <action android:name="android.intent.action.MAIN" />
+
+                <category android:name="android.intent.category.SAMPLE_CODE" />
+            </intent-filter>
+        </activity>
+        <activity
+            android:name=".SearchQueryResults"
+            android:label="@string/app_name" >
+            <intent-filter>
+                <action android:name="android.intent.action.MAIN" />
+
+                <category android:name="android.intent.category.SAMPLE_CODE" />
+            </intent-filter>
+            <intent-filter>
+                <action android:name="android.intent.action.SEARCH" />
+
+                <category android:name="android.intent.category.DEFAULT" />
+            </intent-filter>
+
+            <meta-data
+                android:name="android.app.searchable"
+                android:resource="@xml/searchable" />
+        </activity>
+        <activity
+            android:name="beauty.android.activity.FirstActivity"
+            android:label="@string/app_name" >
+            <intent-filter>
+                <action android:name="android.intent.action.MAIN" />
+                <category android:name="android.intent.category.LAUNCHER" />
+            </intent-filter>
+        </activity>
+        <activity
+            android:name="beauty.android.activity.ProductActivity"
+            android:label="@string/app_name" >
+        </activity>
+        <activity
+            android:name="beauty.android.activity.HomeActivity"
+            android:label="@string/app_name" >
+        </activity>
+        <activity
+            android:name="beauty.android.activity.CommonActivity"
+            android:label="@string/app_name" />
+        <activity
+            android:name="beauty.android.activity.BrandActivity"
+            android:label="@string/app_name" />
+        <activity
+            android:name="beauty.android.activity.CategoryActivity"
+            android:label="@string/app_name" />
+        <activity
+            android:name="beauty.android.activity.BenefitActivity"
+            android:label="@string/app_name" />
+        <activity
+            android:name="beauty.android.activity.TagActivity"
+            android:label="@string/app_name" />
+        <activity
+            android:name="beauty.android.activity.ProductDetailActivity"
+            android:label="@string/app_name" />
+        <activity
+            android:name="beauty.android.activity.FavoriteActivity"
+            android:label="@string/app_name" />
+        <activity
+            android:name="beauty.android.activity.ReviewActivity"
+            android:label="@string/app_name"
+            android:windowSoftInputMode="adjustPan" />
+        <activity
+            android:name="beauty.android.activity.ReviewDetailActivity"
+            android:label="@string/app_name" />
+        <activity
+            android:name="beauty.android.activity.MoreActivity"
+            android:label="@string/app_name" />
+        <activity
+            android:name="beauty.android.activity.MyBeautyActivity"
+            android:label="@string/app_name" />
+        <activity
+            android:name="beauty.android.activity.LoginActivity"
+            android:label="@string/app_name"
+            android:launchMode="singleTask" >
+            <intent-filter>
+                <action android:name="android.intent.action.VIEW" />
+
+                <category android:name="android.intent.category.DEFAULT" />
+                <category android:name="android.intent.category.BROWSABLE" />
+
+                <data
+                    android:host="callback"
+                    android:scheme="x-oauthflow-twitter" />
+            </intent-filter>
+        </activity>
+        <activity
+            android:name="beauty.android.activity.AboutUsActivity"
+            android:label="@string/app_name" />
+        <activity
+            android:name="beauty.android.activity.TutorialActivity"
+            android:label="@string/app_name" />
+        <activity
+            android:name="beauty.android.activity.LocalRetailsActivity"
+            android:label="@string/app_name" >
+        </activity>
+        <activity
+            android:name="beauty.android.activity.RetailDetailActivity"
+            android:label="@string/app_name" >
+        </activity>
+        <activity
+            android:name="beauty.android.activity.AudioActivity"
+            android:label="@string/app_name" >
+        </activity>
+        <activity
+            android:name="beauty.android.activity.DealActivity"
+            android:label="@string/app_name" >
+        </activity>
+        <activity
+            android:name="beauty.android.activity.WebViewActivity"
+            android:label="@string/app_name" >
+        </activity>
+    </application>
+
+</manifest>
